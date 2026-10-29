@@ -33,7 +33,7 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@actions/core": "2.0.3",
+    "@actions/core": "3.0.1",
     "@azure/arm-storage": "^20.2.0",
     "@azure/identity": "^4.14.0",
     "@azure/storage-blob": "^12.34.0",
