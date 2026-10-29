@@ -1,0 +1,29 @@
+# Vulnerabilities reviewed and found not to affect this action.
+
+[[IgnoredVulns]]
+id = "GHSA-xcx6-jx8p-x3h5"
+reason = "@azure/msal-node auth_code flow only. The action authenticates with DefaultAzureCredential (src/publishers/websiteRunFromPackageDeploy.ts), which never calls acquireTokenByCode."
+
+[[IgnoredVulns]]
+id = "GHSA-gcqx-w48m-w2h4"
+reason = "deepmerge is a dev-only transitive dependency of jest and is not part of the shipped bundle."
+
+[[IgnoredVulns]]
+id = "MAL-2025-21003"
+reason = "fs@0.0.1-security is npm's empty security-holder placeholder (npm/security-holder). It contains no code and is only pulled in by azure-actions-appservice-rest and azure-actions-webclient."
+
+[[IgnoredVulns]]
+id = "GHSA-4rq4-32rv-6wp6"
+reason = "shelljs 0.3.0 via azure-actions-utility, which only calls shell.cp and shell.error. The issue is in shell.exec, which is never used."
+
+[[IgnoredVulns]]
+id = "GHSA-64g7-mvw6-v9qj"
+reason = "shelljs 0.3.0 via azure-actions-utility, which only calls shell.cp and shell.error. The issue is in synchronous shell.exec, which is never used."
+
+[[IgnoredVulns]]
+id = "GHSA-w5hq-g745-h8pq"
+reason = "uuid 3.4.0 via azure-actions-appservice-rest, which only uses uuid/v4. The issue is in v3, v5 and v6 with a caller-provided buffer."
+
+[[IgnoredVulns]]
+id = "GHSA-776f-qx25-q3cc"
+reason = "xml2js 0.4.23 is only required by azure-actions-appservice-rest's AzureAppServiceUtility, which the action does not import (it has its own copy in src/appservice-rest that uses xml2js 0.6.2)."
